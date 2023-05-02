@@ -33,8 +33,11 @@ var lastName = [
   "Batz",
 ];
 
+var MaxlengthNanme = 20
 
-document.querySelector('.title').innerText = `How many times would you like to generator (up to 20)`
+document.querySelector('.title').innerText = `How many times would you like to generator (up to ${MaxlengthNanme})`
+
+
 
 function func_getName(){
     var randomName = `${firstName[Math.floor(Math.random() * firstName.length)]}  ${lastName[Math.floor(Math.random() * lastName.length)]}`
@@ -42,9 +45,6 @@ function func_getName(){
 }
 
 function func_nameQty(){
-
-    var MaxlengthNanme = 20
-
     var userQty = document.querySelector('.qty').value;
     document.querySelector('.nameList').innerHTML = ""
     if(userQty > MaxlengthNanme){
